@@ -1,0 +1,44 @@
+.NewlyAddArticle {
+  margin: 50px 0;
+}
+
+.NewlyAddArticle .list-movie {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.NewlyAddArticle .h2 {
+  font-size: 1.4rem;
+  position: relative;
+  color: yellow;
+}
+
+.NewlyAddArticle .h2::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 105%;
+  width: 100%;
+  height: 1.5px;
+  background-color: yellow;
+}
+
+@media only screen and (max-width: 900px) {
+  .NewlyAddArticle .list-movie {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .NewlyAddArticle .list-movie {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .NewlyAddArticle .list-movie {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

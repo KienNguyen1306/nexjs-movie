@@ -1,0 +1,66 @@
+.search-page {
+  margin-top: 40px;
+}
+
+.search-page h2 {
+  font-size: 2rem;
+  color: yellow;
+  text-transform: uppercase;
+}
+.search-page h2 span {
+  font-size: 1.6rem;
+  color: #ffff;
+  text-transform: uppercase;
+  margin-left: 10px;
+}
+
+.search-page-main {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.btn-paging {
+  padding: 5px 10px;
+  border: 1px solid yellow;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  justify-content: center;
+}
+
+.btn-paging .icon polyline {
+  stroke: #ffff;
+}
+
+.paging {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+@media only screen and (max-width: 900px) {
+  .search-page-main {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .search-page-main {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .search-page-main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

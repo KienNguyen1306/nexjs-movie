@@ -1,0 +1,66 @@
+.footer {
+  background-color: #212529;
+  padding: 10px 0;
+}
+
+.footer .logo span {
+  font-size: 2rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+.footer .logo span:last-child {
+  color: yellow;
+}
+
+.footer .body {
+  display: flex;
+  align-items: center;
+}
+.footer .license {
+  margin-left: 50px;
+}
+
+.footer .license p {
+  font-size: 1rem;
+  color: yellow;
+}
+.footer .license p:last-child {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.footer .scrollTop {
+  margin-left: auto;
+  width: 30px;
+  height: 30px;
+  border-radius: 3px;
+  border: 1px solid yellow;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.footer .scrollTop .icon {
+  width: 15px;
+  height: 15px;
+}
+
+@media only screen and (max-width: 900px) {
+}
+
+@media only screen and (max-width: 700px) {
+  .footer .body {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .footer .license {
+    margin-left: 0px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+}

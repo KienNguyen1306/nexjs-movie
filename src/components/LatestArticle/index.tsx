@@ -11,7 +11,7 @@ import Skeleton from "../Skeleton";
 function LatestArticle() {
   const listLater = useSelector((state: any) => state.FILM.listLater);
 
-  const customeSlider = useRef();
+  const customeSlider = useRef(null);
   const previous = () => {
     (customeSlider.current as any)?.slickPrev();
   };

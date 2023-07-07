@@ -6,7 +6,8 @@ function Menu() {
   const dispatch = useDispatch();
 
   function handleShowMenu() {
-    dispatch(toggleBar());
+    let payloadValue = "...";
+    dispatch(toggleBar(payloadValue));
   }
   return (
     <ul>

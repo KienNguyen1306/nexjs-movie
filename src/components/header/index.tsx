@@ -15,11 +15,13 @@ function Header() {
 
   const dispatch = useDispatch();
   function handleShowMenu() {
-    dispatch(toggleBar());
+    let payloadValue = "...";
+    dispatch(toggleBar(payloadValue));
   }
 
   function handleShowSearch() {
-    dispatch(toggleSearch());
+    let payloadValue = "...";
+    dispatch(toggleSearch(payloadValue));
   }
 
   return (

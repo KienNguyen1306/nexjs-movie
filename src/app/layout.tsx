@@ -5,7 +5,7 @@ import Footer from "@/components/footer";
 import { Provider } from "react-redux";
 import store from "@/store";
 import Mayapp from "./Myapp";
-
+import ExampleServerComponent from "./example-server-component";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,6 +27,7 @@ export default function RootLayout({
           <Mayapp>{children}</Mayapp>
           <Footer />
         </body>
+        <ExampleServerComponent />
       </Provider>
     </html>
   );

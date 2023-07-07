@@ -1,4 +1,3 @@
-"use client";
 import Header from "@/components/header";
 import "./globals.css";
 import { Inter } from "next/font/google";
@@ -6,7 +5,7 @@ import Footer from "@/components/footer";
 import { Provider } from "react-redux";
 import store from "@/store";
 import Mayapp from "./Myapp";
-import Head from "next/head";
+
 
 const inter = Inter({ subsets: ["latin"] });
 

@@ -8,6 +8,8 @@ export function mappingFIlmDetail(item: {
   overview: any;
   backdrop_path: any;
   poster_path: any;
+  genres: any;
+  production_countries: any;
 }) {
   return {
     id: item.id,
@@ -15,9 +17,9 @@ export function mappingFIlmDetail(item: {
     date: item.release_date,
     language: "englissh",
     IMDBID: item.imdb_id,
-    Genre: "TV Movie, Comedy",
+    genres: item.genres,
     Runtime: item.runtime,
-    Country: "Canada",
+    countries: item.production_countries,
     des: item.overview,
     backdrop_path: item.backdrop_path,
     poster_path: item.poster_path,

@@ -37,11 +37,13 @@ export const fetchDetailFilm: any = createAsyncThunk(
   "film/detailFilm",
   async (params: any, thunkAPI) => {
     const response = await filmService.getFilmDetail({ filmID: params.id });
+    console.log('res detail film', response.data)
     let data: any = mappingFIlmDetail(response.data);
 
     const resImage = await filmService.getFilmDetailImage({
       filmID: params.id,
     });
+
     let listImage = resImage.data.backdrops;
     data.images = listImage;
     return data;

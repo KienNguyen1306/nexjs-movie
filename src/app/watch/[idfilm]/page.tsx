@@ -10,6 +10,8 @@ import { fetchDetailFilm, fetchListFilmRelate } from "@/store/filmSlice";
 import Head from "next/head";
 import Loading from "@/components/shared/loading/loading2";
 import SreenImage from "./SreenImage";
+import InfoFilm from "./InfoFilm";
+import VideoFilm from "./VideoFilm";
 
 function Movie() {
   const detailFilm = useSelector((state: any) => state.FILM.detailFilm);
@@ -48,51 +50,8 @@ function Movie() {
             <h2>All Aboard for Love</h2>
           </div>
           <div className="movie-main">
-            <div className="left">
-              <div className="image">
-                <img
-                  src={`https://image.tmdb.org/t/p/w400/${detailFilm.poster_path}`}
-                  alt="error"
-                />
-              </div>
-              <div className="content">
-                <ul>
-                  <li>
-                    IMDB: <span>{detailFilm.IMDB}</span>
-                  </li>
-                  <li>
-                    Release Year:<span>{detailFilm.date}</span>
-                  </li>
-                  <li>
-                    Language: <span>{detailFilm.language}</span>
-                  </li>
-                  <li>
-                    IMDB-ID: <span>{detailFilm.IMDBID}</span>
-                  </li>
-                  <li>
-                    TMDB-ID: <span>{detailFilm.id}</span>
-                  </li>
-                  <li>
-                    Genre: <span>TV Movie, Comedy</span>
-                  </li>
-                  <li>
-                    Runtime: <span>{detailFilm.Runtime} minute</span>
-                  </li>
-                  <li>
-                    Release Country: <span>Canada</span>
-                  </li>
-                </ul>
-                <h4>Plot</h4>
-                <p className="line-clamp-4">{detailFilm.des}</p>
-              </div>
-            </div>
-            <div className="right">
-              <iframe
-                className="video"
-                src={`https://www.2embed.cc/embed/${detailFilm.IMDBID}`}
-                style={{ width: "100%", height: 365 }}
-              />
-            </div>
+            <InfoFilm detailFilm={detailFilm} />
+            <VideoFilm IMDBID={detailFilm.IMDBID} />
           </div>
         </div>
         <div className="screenshots">

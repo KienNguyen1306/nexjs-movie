@@ -15,7 +15,7 @@ export function mappingFIlmDetail(item: {
     id: item.id,
     IMDB: item.vote_average,
     date: item.release_date,
-    language: "englissh",
+    language: item.spoken_languages,
     IMDBID: item.imdb_id,
     genres: item.genres,
     Runtime: item.runtime,

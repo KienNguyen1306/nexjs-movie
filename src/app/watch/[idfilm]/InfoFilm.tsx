@@ -13,10 +13,20 @@ function InfoFilm({ detailFilm }: any) {
             IMDB: <span>{detailFilm.IMDB}</span>
           </li>
           <li>
-            Release Year:<span>{detailFilm.date}</span>
+            Release Year: <span>{detailFilm.date}</span>
           </li>
           <li>
-            Language: <span>{detailFilm.language}</span>
+            Language:{" "}
+            <span line-clamp-2>
+              {detailFilm.language.map((item: any) => {
+                return (
+                  <>
+                    <span>{item.name}</span>
+                    <span className="comma">{`, `}</span>
+                  </>
+                );
+              })}
+            </span>
           </li>
           <li>
             IMDB-ID: <span>{detailFilm.IMDBID}</span>
@@ -25,13 +35,13 @@ function InfoFilm({ detailFilm }: any) {
             TMDB-ID: <span>{detailFilm.id}</span>
           </li>
           <li>
-            Genre:
+            Genre:{" "}
             <span>
               {detailFilm.genres.map((item: any) => {
                 return (
                   <>
                     <span>{item.name}</span>
-                    <span className="comma">,</span>
+                    <span className="comma">{`, `}</span>
                   </>
                 );
               })}
@@ -47,7 +57,7 @@ function InfoFilm({ detailFilm }: any) {
                 return (
                   <>
                     <span>{item.name}</span>
-                    <span className="comma">,</span>
+                    <span className="comma">{`, `}</span>
                   </>
                 );
               })}

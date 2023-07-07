@@ -34,8 +34,8 @@ export function mappingFIlmItem(item: any) {
   };
 }
 
-export function mappingCaterogyToObject(array) {
-  let res = {};
+export function mappingCaterogyToObject(array: any) {
+  let res: any = {};
   for (let i = 0; i < array.length; i++) {
     res[array[i].id] = {
       id: array[i].id,

@@ -6,7 +6,7 @@ import NewlyAddArticle from "@/components/NewlyAddArticle";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { fetchListFilm } from "@/store/filmSlice";
-import { metadata } from "./layout";
+import { metadata } from "./client";
 import Head from "next/head";
 
 export default function Home() {

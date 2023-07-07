@@ -173,3 +173,48 @@
   height: 30px;
   cursor: pointer;
 }
+
+@media only screen and (max-width: 900px) {
+}
+
+@media only screen and (max-width: 700px) {
+  .movie .movie-main {
+    flex-direction: column;
+    height: auto;
+  }
+  .video {
+    width: 80%;
+  }
+  .movie .movie-main .left {
+    width: 100%;
+    height: 350px;
+  }
+  .movie .movie-main .right {
+    width: 100%;
+  }
+  .screenshots-main {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+  }
+
+  .relat-main {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .search-page-main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .screenshots-main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+  }
+  .relat-main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

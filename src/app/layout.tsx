@@ -22,13 +22,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <Provider store={store}>
+      <Provider store={store}>
+        <body className={inter.className}>
           <Header />
           <Mayapp>{children}</Mayapp>
           <Footer />
-        </Provider>
-      </body>
+        </body>
+      </Provider>
     </html>
   );
 }

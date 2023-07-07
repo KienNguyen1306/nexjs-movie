@@ -88,6 +88,7 @@ function Movie() {
             </div>
             <div className="right">
               <iframe
+                className="video"
                 src={`https://www.2embed.cc/embed/${detailFilm.IMDBID}`}
                 style={{ width: "100%", height: 365 }}
               />

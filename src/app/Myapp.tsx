@@ -1,13 +1,14 @@
 "use client";
 
-import store from "@/store";
 import { fetchListPopular } from "@/store/filmSlice";
+import { fetchGenericFilm } from "@/store/generic";
 import { useEffect } from "react";
-import { Provider, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 
 function Myapp({ children }: { children: any }) {
   const dispatch = useDispatch();
   useEffect(() => {
+    dispatch(fetchGenericFilm());
     dispatch(fetchListPopular());
   }, []);
   return <div className="app">{children}</div>;

@@ -7,6 +7,7 @@ import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { fetchListFilm } from "@/store/filmSlice";
 import { metadata } from "./layout";
+import Head from "next/head";
 
 export default function Home() {
   const dispatch = useDispatch();
@@ -16,15 +17,18 @@ export default function Home() {
   }, []);
 
   return (
-    <div>
-      <head>
+    <>
+      <Head>
         <title>Home</title>
         <meta name="description" content={metadata.description} />
-      </head>
-      <main className="home">
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="initial-scale=1, width=device-width" />
+        <meta name="theme-color" content="#000000" />
+      </Head>
+      <div className="home">
         <LatestArticle />
         <NewlyAddArticle />
-      </main>
-    </div>
+      </div>
+    </>
   );
 }

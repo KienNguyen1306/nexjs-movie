@@ -52,7 +52,7 @@ export const fetchListFilmRelate: any = createAsyncThunk(
   "film/filmRelate",
   async (params: any, thunkAPI) => {
     const response = await filmService.getFilmRelate({ filmID: params.id });
-    return response.data.results;
+    return response.data.results.map(mappingFIlmItem);
   }
 );
 

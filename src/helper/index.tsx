@@ -33,3 +33,14 @@ export function mappingFIlmItem(item: any) {
     genre_ids: item.genre_ids,
   };
 }
+
+export function mappingCaterogyToObject(array) {
+  let res = {};
+  for (let i = 0; i < array.length; i++) {
+    res[array[i].id] = {
+      id: array[i].id,
+      name: array[i].name,
+    };
+  }
+  return res;
+}

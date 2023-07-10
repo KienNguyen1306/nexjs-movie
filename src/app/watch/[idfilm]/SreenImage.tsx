@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useState } from "react";
 import { AiOutlineClose } from "react-icons/ai";
 function SreenImage({ image }: { image: string }) {
@@ -14,10 +15,12 @@ function SreenImage({ image }: { image: string }) {
       <div className="close-image">
         <AiOutlineClose className="icon" onClick={handleSreenOff} />
       </div>
-      <img
+      <Image
         src={`https://image.tmdb.org/t/p/original${image}`}
         alt="error"
         onClick={handleSreenImage}
+        width={0}
+        height={0}
       />
     </div>
   );

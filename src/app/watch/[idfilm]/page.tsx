@@ -16,8 +16,6 @@ import VideoFilm from "./VideoFilm";
 function Movie() {
   const detailFilm = useSelector((state: any) => state.FILM.detailFilm);
   const listRelate = useSelector((state: any) => state.FILM.listRelate);
-
-  console.log("detail", detailFilm);
   const [loading, setLoaing] = useState(true);
   const params = useParams();
 

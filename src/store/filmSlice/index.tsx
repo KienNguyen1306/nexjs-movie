@@ -5,6 +5,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 let initialState = {
   listLater: [],
   listPopular: { list: [], currentPages: 1, totalPages: 0 },
+  listFilmCate: { list: [], currentPages: 1, totalPages: 0 },
   listRelate: [],
   detailFilm: {},
   searchFilm: { list: [], currentPages: 1, totalPages: 0, totalItem: 0 },
@@ -37,7 +38,6 @@ export const fetchDetailFilm: any = createAsyncThunk(
   "film/detailFilm",
   async (params: any, thunkAPI) => {
     const response = await filmService.getFilmDetail({ filmID: params.id });
-    console.log('res detail film', response.data)
     let data: any = mappingFIlmDetail(response.data);
 
     const resImage = await filmService.getFilmDetailImage({
@@ -74,6 +74,23 @@ export const fetchSearchFilm: any = createAsyncThunk(
   }
 );
 
+export const fetchListFilmCaterogy: any = createAsyncThunk(
+  "film/filmCaterogy",
+  async (params: any, thunkAPI) => {
+    const response = await filmService.getFilmCaterogy({
+      cateID: params.id,
+      page: params.page,
+    });
+    let listdata = response.data.results.map(mappingFIlmItem);
+    let data = {
+      list: listdata,
+      totalPage: response.data.total_pages,
+      currentPage: response.data.page,
+    };
+    return data;
+  }
+);
+
 //============================== slice =======================
 export const listFilm = createSlice({
   name: "film",
@@ -96,6 +113,9 @@ export const listFilm = createSlice({
       .addCase(fetchSearchFilm.fulfilled, (state, action) => {
         state.searchFilm.list = action.payload.list;
         state.searchFilm.totalItem = action.payload.totalItem;
+      })
+      .addCase(fetchListFilmCaterogy.fulfilled, (state, action) => {
+        state.listFilmCate = action.payload;
       });
   },
 });

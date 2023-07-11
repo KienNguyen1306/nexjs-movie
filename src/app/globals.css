@@ -94,3 +94,14 @@ body:before {
   grid-template-columns: repeat(6, 1fr);
   gap: 20px;
 }
+
+html ::-webkit-scrollbar {
+  border-radius: 0px;
+  width: 8px;
+  background-color: #ccc;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(17, 17, 17);
+  border-radius: 99999px;
+}

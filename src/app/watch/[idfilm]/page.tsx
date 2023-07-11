@@ -7,7 +7,6 @@ import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchDetailFilm, fetchListFilmRelate } from "@/store/filmSlice";
-import Head from "next/head";
 import Loading from "@/components/shared/loading/loading2";
 import SreenImage from "./SreenImage";
 import InfoFilm from "./InfoFilm";
@@ -25,7 +24,7 @@ function Movie() {
       setLoaing(false);
     });
     dispatch(fetchListFilmRelate({ id: params.idfilm }));
-  }, []);
+  }, [dispatch, params.idfilm]);
 
   if (loading) {
     return (

@@ -36,6 +36,12 @@ const filmService = {
       `/3/search/movie?query=${query}&include_adult=false&language=en-US&page=${page}&api_key=${api_key}`
     );
   },
+
+  getFilmCaterogy: ({ cateID, page = 1 }: { cateID: any; page: any }) => {
+    return API.call().get(
+      `3/discover/movie?api_key=${api_key}&with_genres=${cateID}&page=${page}`
+    );
+  },
 };
 
 export default filmService;

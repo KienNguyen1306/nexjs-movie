@@ -11,7 +11,6 @@ export const fetchGenericFilm: any = createAsyncThunk(
   "generic/fetchgeneric",
   async (params, thunkAPI) => {
     const response = await genreService.getGenre();
-    
     return mappingCaterogyToObject(response.data.genres);
   }
 );

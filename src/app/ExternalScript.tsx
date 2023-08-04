@@ -5,7 +5,7 @@ const ExternalScript = () => (
   <Script
     async
     src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6043051361671877"
-    crossorigin="anonymous"
+    crossOrigin="anonymous"
   />
 );
 

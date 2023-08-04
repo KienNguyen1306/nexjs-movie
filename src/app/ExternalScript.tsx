@@ -3,8 +3,8 @@ import Script from "next/script";
 
 const ExternalScript = () => (
   <Script
-    src="https://your-script-url.com"
-    strategy="beforeInteractive"
+    async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6043051361671877"
     crossorigin="anonymous"
   />
 );

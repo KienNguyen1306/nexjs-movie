@@ -24,7 +24,6 @@ export default function Home() {
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1, width=device-width" />
         <meta name="theme-color" content="#000000" />
-        <ExternalScript />
       </Head>
       <div className="home">
         <LatestArticle />

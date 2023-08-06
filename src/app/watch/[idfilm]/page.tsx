@@ -54,7 +54,7 @@ function Movie() {
         <div className="screenshots">
           <h2>SREENSHOTS</h2>
           <div className="screenshots-main">
-            {detailFilm.images.map((item: any, index: number) => {
+            {detailFilm.images.slice(0, 2).map((item: any, index: number) => {
               return <SreenImage key={index} image={item.file_path} />;
             })}
           </div>
